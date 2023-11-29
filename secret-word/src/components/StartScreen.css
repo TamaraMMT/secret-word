@@ -1,0 +1,9 @@
+.start h1 {
+  color: rgb(204, 208, 208);
+  font-size: 3.5rem;
+}
+
+.start p {
+  margin-bottom: 2rem;
+  color: rgb(0, 0, 0);
+}
