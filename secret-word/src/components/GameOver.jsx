@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import "./GameOver.css";
 
 const GameOver = ({ retry }) => {
@@ -8,4 +10,9 @@ const GameOver = ({ retry }) => {
     </div>
   );
 };
+
+GameOver.propTypes = {
+  retry: PropTypes.func,
+};
+
 export default GameOver;
