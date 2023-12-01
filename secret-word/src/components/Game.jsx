@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Game.css";
 
 const Game = ({
@@ -14,11 +14,15 @@ const Game = ({
   score,
 }) => {
   const [letter, setLetter] = useState("");
+  const letterInputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     verifyLetter(letter);
+    setLetter("");
+
+    letterInputRef.current.focus();
   };
   return (
     <div className="game">
@@ -26,10 +30,9 @@ const Game = ({
         <span>Score: {score}</span>
       </p>
 
-      <h1>Guess the Word</h1>
+      <h1>Guess the word...</h1>
       <h3 className="clue">
-        Clue for the word:
-        <span>{pickedCategory}</span>
+        Clue for the word:<span> {pickedCategory}</span>
       </h3>
       <p>You still have {guesses} attempt(s).</p>
       <div className="wordContainer">
@@ -53,16 +56,21 @@ const Game = ({
             required
             onChange={(e) => setLetter(e.target.value)}
             value={letter}
+            ref={letterInputRef}
           />
           <button onClick={verifyLetter}>send</button>
         </form>
       </div>
-      <div className="wrongLettersContainer">
-        <p>Letters alredy used.</p>
-        {wrongLetters.map((letter, i) => (
-          <span key={i}>{letter}</span>
-        ))}
-      </div>
+      {wrongLetters.length > 0 && (
+        <div className="wrongLettersContainer">
+          <span>Letters already used: </span>
+          {wrongLetters.map((letter, i) => (
+            <span className="letters-alredy-used" key={i}>
+              {i < wrongLetters.length - 1 ? letter + " - " : letter + "."}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
