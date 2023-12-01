@@ -4,10 +4,10 @@ html, body {
 
 body {
   font-family: Helvetica;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, rgb(137, 138, 133) 10%, rgb(77, 60, 36) 100%);
-  color:rgb(0, 0, 0) ;
+  background:  rgb(47, 47, 47);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
