@@ -1,4 +1,5 @@
 import './StartScreen.css'
+import PropTypes from "prop-types";
 
 const StartScreen = ({ startGame }) => {
   return (
@@ -9,4 +10,9 @@ const StartScreen = ({ startGame }) => {
     </div>
   );
 };
+
+StartScreen.propTypes = {
+  startGame: PropTypes.func,
+};
+
 export default StartScreen
