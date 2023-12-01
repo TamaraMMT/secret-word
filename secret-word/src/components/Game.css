@@ -1,4 +1,55 @@
-h1 {
+.game h1 {
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
 }
+
+.points span {
+  font-weight: bold;
+}
+
+.clue span {
+  color: rgb(255, 200, 19)
+}
+
+.wordContainer {
+  margin: 0.5em;
+  padding: .5em;
+  border: 5px solid #bdbdbd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.letter,
+.blankSquare {
+  font-size:  50px;
+  line-height: 1.6;
+  border: 4px solid rgb(57, 56, 56);
+  height: 60px;
+  width: 60px;
+  background-color: rgb(227, 227, 227);
+  text-transform: uppercase;
+  color: rgb(27, 27, 27);
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.letterContainer p {
+  margin-bottom: 1.2em;
+}
+
+.letterContainer form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.letterContainer input {
+  height: 100%;
+  width: 30px;
+  font-size: 1em;
+  text-align: center;
+  margin-right: 0.5em;
+}
+
