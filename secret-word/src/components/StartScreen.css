@@ -1,6 +1,9 @@
 .start h1 {
   color: rgb(255, 255, 255);
+  font-family: 'Righteous', serif;
   font-size: 3.5rem;
+  text-transform: uppercase;
+  text-shadow: .03em .03em 0 rgb(40, 40, 40);
 }
 
 .start p {
